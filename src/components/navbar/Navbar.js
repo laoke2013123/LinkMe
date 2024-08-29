@@ -1,5 +1,5 @@
 'use client';
-import { faChartLine, faCircleArrowRight, faFileLines, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faChartLine, faCircleArrowRight, faFileLines, faLink, faUser } from "@fortawesome/free-solid-svg-icons";
 import ProfileIcon from "../icons/ProfileIcon";
 import LogoutSideButton from "../buttons/LogoutSideButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -32,11 +32,18 @@ export default function Navbar({session}){
                     <FontAwesomeIcon icon={faChartLine} className="h-6"></FontAwesomeIcon>
                     <span className="text-lg">Analytics</span>
                   </Link>
+                  <Link href={'/manage'} className={"flex items-center gap-3 p-4 " 
+                  +(pathName === '/manage' ? 'bg-marble rounded-2xl text-purple':'hover:bg-marble rounded-2xl')
+                    }>
+                    <FontAwesomeIcon icon={faLink} className="h-5"></FontAwesomeIcon>
+                    <span className="text-lg">Manage Links</span>
+                  </Link>
                   <LogoutSideButton />
                   <Link href={'/'} className="flex items-center gap-3 p-4 hover:bg-marble rounded-2xl">
                     <FontAwesomeIcon icon={faCircleArrowRight} className="h-6"/>
                     <span className="text-lg">Back to Website</span>
                   </Link>
+                  
                 </nav>
               </div>
             </aside>

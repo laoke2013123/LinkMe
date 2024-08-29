@@ -21,13 +21,8 @@ export default async function AppLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <main className="flex min-h-screen bg-marble ">
-          <Navbar session={session}/>
-          <div className="grow">
-            <div className="bg-white p-4 rounded-2xl m-4 shadow-md">
+        <main >
               {children}
-            </div>
-          </div>
         </main>
       </body>
     </html>

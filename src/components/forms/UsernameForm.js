@@ -16,7 +16,7 @@ export default function UsernameForm({desiredUsername}){
                 setFormResult(result);
             }else{
                 setFormResult(result);
-                router.push('/account/'+result.username);
+                router.refresh();
             }
         }catch(error){
             console.error(error.message)

@@ -6,7 +6,7 @@ import { redirect } from 'next/navigation';
 export default async function LoginPage(){
     const session = await getServerSession(authOptions);
     if(session){
-        redirect('account');
+        redirect('/account');
     }
     return(
         <div>
